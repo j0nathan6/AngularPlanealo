@@ -1,0 +1,86 @@
+<!--Section: Blog v.2-->
+<section class="text-center py-4">
+
+    <!--Section heading-->
+    <h2 class="h1 font-weight-bold text-center mb-5 pt-4">Select City</h2>
+    <!--Section description-->
+    <form class="form-inline md-form mr-auto mb-4 flex-center">
+        <input mdbInputDirective class="form-control mr-sm-2" type="text" [(ngModel)]="city" placeholder="Enter City" aria-label="Search" [value]="username" (input)="username = $event.target.value">
+      </form>
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-2 mb-2 waves-light" mdbWavesEffect>
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg" class="img-fluid" alt="First sample image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <h4 class="mb-3 font-weight-bold dark-grey-text mt-5">
+                <strong>Chinchorros</strong>
+            </h4>
+            <a mdbBtn (click)="getChinchorreo()" color="pink" rounded="true" size="md" class="waves-light" mdbWavesEffect>Search</a>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-2 mb-2 waves-light" mdbWavesEffect>
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" class="img-fluid" alt="Second sample image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <h4 class="mb-3 font-weight-bold dark-grey-text mt-5">
+                <strong>Culture & Science</strong>
+            </h4>
+            <a mdbBtn (click)="getAttraction()"  color="deep-orange" rounded="true" size="md" class="waves-light" mdbWavesEffect>Search</a>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-2 mb-2 waves-light" mdbWavesEffect>
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/13.jpg" class="img-fluid" alt="Thrid sample image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <h4 class="mb-3 font-weight-bold dark-grey-text mt-5">
+                <strong>Hotels</strong>
+            </h4>
+            <a mdbBtn (click)="getAccomodation()"  color="info" rounded="true" size="md" class="waves-light" mdbWavesEffect>Search</a>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Section: Blog v.2-->
+<div class="row" style="padding:100px">
+    <div class="col-4 mt-4" *ngFor="let item of routes$">
+        <mdb-card>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>{{item.name}}</h4>
+              </mdb-card-title>
+              <mdb-card-text>{{item.category}}</mdb-card-text>
+              <div class="flex-row">
+                <a href="{{item.website}}" class="btn btn-outline-primary flex-center">Website</a>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+    </div>
+</div>

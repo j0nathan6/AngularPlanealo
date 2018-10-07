@@ -1,0 +1,32 @@
+<!-- Start your project here-->
+<div style="height: 100vh">
+  <div class="flex-center flex-column" style="background: linear-gradient(to left, #ff7e5f, #feb47b)">
+    <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+
+    <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+    <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+
+    <p class="animated fadeIn text-muted">MDB Team</p>
+    <a href="#" class="btn btn-primary waves-light"  mdbWavesEffect>Button</a>
+
+  </div>
+  <div class="row"></div>
+  <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let route of routes$">
+    <mdb-card>
+      <!--Card image-->
+      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+      <!--Card content-->
+      <mdb-card-body>
+    
+        <!--Title-->
+        <mdb-card-title> <h4>{{route.name}}</h4> </mdb-card-title>
+    
+        <!--Text-->
+        <mdb-card-text> {{route.latitude}} </mdb-card-text>
+    
+        <a href="{{route.website}}" class="btn btn-primary waves-light" mdbWavesEffect>Website</a>
+      </mdb-card-body>
+    </mdb-card>
+  </div>
+</div>
+<!-- /Start your project here-->
